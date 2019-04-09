@@ -5,7 +5,7 @@ export default class Doctor {
 
       let request = new XMLHttpRequest();
       let url = `https://api.betterdoctor.com/2018-03-01/doctors?location=wa-seattle&query=${search}&user_key=${process.env.exports.apiKey}`;
-      
+
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);
@@ -19,12 +19,11 @@ export default class Doctor {
 
     });
   }
-  searchName (name) {
+  specialty (specialty) {
     return new Promise(function(resolve, reject) {
 
       let request = new XMLHttpRequest();
-      let url = `https://api.betterdoctor.com/2018-03-01/doctors?location=wa-seattle&name=${name}&user_key=${process.env.exports.apiKey}`;
-      
+      let url = `https://api.betterdoctor.com/2018-03-01/doctors?specialty_uid=${specialty}&location=wa-seattle&user_key=${process.env.exports.apiKey}`;
       request.onload = function() {
         if (this.status === 200) {
           resolve(request.response);

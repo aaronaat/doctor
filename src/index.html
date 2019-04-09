@@ -10,7 +10,19 @@
 
       <button class="btn-success" id="doctorName">Search by Name!</button>
 
-      <button class="btn-success" id="doctorSearch">Search by other condition/medical issue!</button>
+      <br><br>
+
+      <form id="condition">
+      <select name="specialty" id="specialty" required>
+      <option value="" disabled selected>Condition</option>
+      <option value="family-practitioner">Family Practitioner</option>
+      <option value="neurologist">Neurologist</option>
+      <option value="anesthesiologist">Anesthesiologist</option>
+      <option value="massage-therapist">Massage Therapist</option>
+      <option value="ophthalmologist">Ophthalmologist</option>
+      </select>
+      <button type="submit">Find Seattle Specialist</button>
+      </form>
 
       <div class="errors"></div>
       <div class="showName"></div>
